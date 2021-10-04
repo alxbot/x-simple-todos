@@ -1,0 +1,22 @@
+{
+  "name": "x-simple-todo",
+  "version": "0.0.1",
+  "description": "Simple, lightweight  todo app for messy people",
+  "main": "index.js",
+  "workspaces":[
+    "todos-rdx-next",
+    "todos-rdx"
+  ],
+  "scripts": {
+    "build":"npm run build --workspace=todos-rdx && npm run build --workspace=todos-rdx-next",
+    "start":"npm run start --workspace=todos-rdx && npm dev --workspace=todos-rdx-next",
+    "react": "npm run start --workspace=todos-rdx",
+    "next": "npm run dev --workspace=todos-rdx-next",
+    "build:react":"npm run build --workspace=todos-rdx",
+    "build:next":"npm run build --workspace=todos-rdx-next",
+    "lint": "npm run lint --workspace=todos-rdx-next"
+
+  },
+  "author": "Prismalab - Alex Agudelo",
+  "license": "MIT"
+}
